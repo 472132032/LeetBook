@@ -28,8 +28,6 @@ from typing import List
 def bubble_sort(intervals: List[List[int]]):
     length = len(intervals)
 
-    flag = True
-
     # 外层是冒泡的次数
     for i in range(length):
 
@@ -57,7 +55,6 @@ def bubble_sort(intervals: List[List[int]]):
 def merge_cross(intervals: List[List[int]]) -> List[List[int]]:
     new_intervals = list()
     mark = 0
-    skip = 0
 
     # 起点断点放入
     new_interval = intervals[0]
