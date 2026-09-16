@@ -30,4 +30,21 @@ from typing import List
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        return None
+        longest = ""
+        fristStr = strs[0]
+
+        for index in range(len(fristStr)):
+            for current in strs[1:]:
+                if len(current) > index and fristStr[index] == current[index]:
+                    # 什么都不做
+                    pass
+                else:
+                    return longest
+            longest += fristStr[index]
+
+        return longest
+
+
+if __name__ == '__main__':
+    strs = ["flower", "flow", "flight"]
+    print(Solution().longestCommonPrefix(strs))
